@@ -10,20 +10,20 @@ A memória RAM é uma memória volátil, ou seja, quando à queda de energia, as
 Já a memória ROM é uma memória tipo leitura e não é volátil, seus dados so mantidos mesmo após quedas de energia. Seu acesso é sequencial.
 
 ### 3. Considere o código abaixo:
-
-    #include <stdio.h>
-        int main(void)
-        {
-	    int i;
-            printf("Insira um número inteiro: ");
-	    scanf("%d", &i);
-	    if(i%2)
-		printf("%d eh impar.\n");
-	    else
-		printf("%d eh par.\n");
-	    return 0;
-        }
-
+```C 
+#include <stdio.h>
+int main(void)
+{
+    int i;
+    printf("Insira um número inteiro: ");
+    scanf("%d", &i);
+    if(i%2)
+	printf("%d eh impar.\n");
+    else
+	printf("%d eh par.\n");
+    return 0;
+}
+```
 ### Para este código, responda: (a) A variável i é armazenada na memória RAM ou ROM? Por quê? (b) O programa compilado a partir deste código é armazenado na memória RAM ou ROM? Por quê?
 
 a) A variável i fica armazenada na memória RAM, isso por que não é importante que o conteúdo dessa variável seja mantido mesmo após uma queda de energia, além disso, é interessante que essa variável seja acessada rapidamente para mostrar o resultado ao usuário, por isso, a memória RAM é mais adequada.
@@ -39,7 +39,7 @@ A vantagem da arquitetura de Harvard é que ela é mais rápida, devido aos aces
 
 ### 5. Considere a variável inteira i, armazenando o valor 0x8051ABCD. Se i é armazenada na memória a partir do endereço 0x0200, como ficam este byte e os seguintes, considerando que a memória é: (a) Little-endian; (b) Big-endian.
 
-a) Litte-Endian
+**a) Litte-Endian**
 
 0x0200 -> 0xCD
 
@@ -49,7 +49,7 @@ a) Litte-Endian
 
 0x0203 -> 0x80
 
-b) Big-Endian
+**b) Big-Endian**
 
 0x0200 -> 0x80
 
