@@ -24,22 +24,12 @@ a = a & 11110011
 
 (e) Somente inverter o bit mais significativo de a. 
 ```C
-int bitXor(int x, int y)
-{
-    return (x & ~y) | (~x & y);
-}
-... 
-a = bitXor(int(a), 0b10000000)
+a ^= 0b10000000
 ```
 
 (f) Inverter o nibble mais significativo de a, e setar o nibble menos significativo de a.
 ```C
-int bitXor(int x, int y)
-{
-    return (x & ~y) | (~x & y);
-}
-... 
-a = bitXor(int(a), 0b11110000)
+a ^= 0b11110000
 a = a | 0b00001111
 
 ```
