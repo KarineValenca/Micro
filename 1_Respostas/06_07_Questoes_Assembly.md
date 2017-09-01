@@ -56,7 +56,27 @@ int Potencia(int x, int N){
 ```C
 int Primalidade(unsigned int x);
 ```
+**Resposta:**
+```C
+int Primalidade(unsigned int x){
+	int divisor = 2, isPrimo = 1;
 
+	if(x<=1){
+		isPrimo = 0;
+	}
+
+	while(isPrimo == 1 && divisor <= x/2){
+		if(x % divisor == 0){
+			isPrimo = 0;
+		}
+			divisor = divisor + 1;
+		
+	}
+
+	return isPrimo;
+
+}
+```
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. A variável de entrada é fornecida pelo registrador R15, e o valor de saída também.
 
 6. Escreva uma função em C que calcula o duplo fatorial de n, representado por n!!. Se n for ímpar, n!! = 1*3*5*...*n, e se n for par, n!! = 2*4*6*...*n. Por exemplo, 9!! = 1*3*5*7*9 = 945 e 10!! = 2*4*6*8*10 = 3840. Além disso, 0!! = 1!! = 1.
