@@ -87,6 +87,7 @@ unsigned long long DuploFatorial(unsigned long long n);
 ```
 
 7. (a) Escreva uma função em C que calcula a função exponencial utilizando a série de Taylor da mesma. Considere o cálculo até o termo n = 20. O protótipo da função é `double ExpTaylor(double x);`
+
 **Resposta**
 ```C
 double ExpTaylor(int i,double x){
