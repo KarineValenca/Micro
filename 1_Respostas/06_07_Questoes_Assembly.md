@@ -12,6 +12,7 @@ O protótipo da função é:
 unsigned int Raiz_Quadrada(unsigned int S);
 ```
 
+**Resposta:**
 ``` C
 unsigned float Raiz_Quadrada(unsigned float S){
 	int i = 0;
@@ -32,7 +33,18 @@ unsigned float Raiz_Quadrada(unsigned float S){
 ```C
 int Potencia(int x, int N);
 ```
-
+**Resposta:**
+```C
+int Potencia(int x, int N){
+	int i = 1, pot=x;
+	while(i < N){
+		pot *= x;
+		i++;
+	}
+	
+	return pot;
+}
+```
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. `x` e `n` são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida no registrador R15.
 
 3. Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula a divisão de `a` por `b`, onde `a`, `b` e o valor de saída são inteiros de 16 bits. `a` e `b` são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através do registrador R15.
