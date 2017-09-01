@@ -87,6 +87,16 @@ unsigned long long DuploFatorial(unsigned long long n);
 ```
 
 7. (a) Escreva uma função em C que calcula a função exponencial utilizando a série de Taylor da mesma. Considere o cálculo até o termo n = 20. O protótipo da função é `double ExpTaylor(double x);`
+**Resposta**
+```C
+double ExpTaylor(int i,double x){
+	if(i <= 1){
+		return 1;
+	}
+	return ExpTaylor(i-1, x) + pow(x, i-1)/fatorial(i-1);
+
+}
+```
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430, mas considere que os valores de entrada e de saída são inteiros de 16 bits. A variável de entrada é fornecida pelo registrador R15, e o valor de saída também.
 
 8. Escreva uma sub-rotina na linguagem Assembly do MSP430 que indica se um vetor esta ordenado de forma decrescente. Por exemplo:
