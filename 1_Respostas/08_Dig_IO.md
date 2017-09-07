@@ -22,7 +22,8 @@ int main(){
 	}	
 
 
-}```
+}
+```
 
 2. Escreva um código em C que pisca os LEDs ininterruptamente. No ciclo que pisca os LEDs, o tempo que os LEDs ficam ligados deve ser duas vezes maior do que o tempo que eles ficam desligados.
 ```C
@@ -50,7 +51,8 @@ int main(){
 	}	
 
 
-}```
+}
+```
 
 3. Escreva um código em C que acende os LEDs quando o botão é pressionado.
 ```C
