@@ -29,6 +29,7 @@ Rb = 30241.93 ohm
 ```
 
 3. Projete o hardware utilizado para controlar 6 LEDs utilizando charlieplexing. Apresente os pinos utilizados no MSP430 e os LEDs, nomeados L1-L6.
+
 ![im](https://user-images.githubusercontent.com/8433187/30514980-4a185302-9af6-11e7-86cc-74e748188dc9.png)
 
 Para acender:
