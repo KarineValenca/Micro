@@ -46,15 +46,14 @@ L6: P1.0 = 0 P1.1 = entrada digital P1.2 = 1
 void main(void){}
 	char anodo[] = {BIT1,BIT2 ,BIT0, BIT1, BIT0, BIT2};
 	char catodo[] = {BIT2, BIT1, BIT1, BIT0, BIT2, BIT0};
-	char entrada[] = {BIT0, BIT0, BIT2, BIT2, BIT1, BIT1};
+	
 	int i = 0;
 	while(1){
-		PIDIR |= (anodo[i] + catodo[i]);
-		P1DIR &= entrada[i];
-		P1OUT |= anodo[i];
-		P1OUT &= ~catodo[i];
-		//fazer módulo 6
-		i = (i+1)%6;
+		P1DIR &= ~(BIT0+BIT1+BIT2);
+		PIOUT |= anodo[i];
+		PIOUT &= ~catodo[i]
+		PIDIR |= anodo [i] + catodo [i];
+		i= (i+1)%6; 
 	}
 ```
 
@@ -70,10 +69,11 @@ void main(void){}
 	char entrada[] = {BIT0, BIT0, BIT2, BIT2, BIT1, BIT1};
 	int i = 0;
 	while(1){
-		PIDIR |= (anodo[i] + catodo[i]);
-		P1DIR &= entrada[i];
-		P1OUT |= anodo[i];
-		P1OUT &= ~catodo[i];
+		P1DIR &= ~(BIT0+BIT1+BIT2);
+		PIOUT |= anodo[i];
+		PIOUT &= ~catodo[i]
+		PIDIR |= anodo [i] + catodo [i];
+		i= (i+1)%6; 
 		
 		i = (i+1)%6;
 		
